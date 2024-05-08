@@ -2,7 +2,7 @@ version: "2.3"
 
 services:
     mendixapp:
-        image: thamothiran/firstdeployementproject-main_3:1.0
+        image: mendix-testapp:$BUILDPACK_VERSION
         healthcheck:
             test: ["CMD", "curl", "-f", "http://localhost"]
             interval: 15s
