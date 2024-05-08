@@ -16,7 +16,7 @@ services:
             MXRUNTIME_DatabaseUserName: mendix
             MXRUNTIME_DatabasePassword: mendix
             MXRUNTIME_DatabaseHost: db:3306
-            MXRUNTIME_DatabaseName: jdbc:mysql://localhost:3306/employee_management
+            MXRUNTIME_DatabaseName: mendix
             # DATABASE_URL: mysql://mendix:mendix@db:3306/mendix
         ports:
             - 8081:8081
@@ -26,10 +26,9 @@ services:
     db:
         image: mysql:5.7
         environment:
-            - MYSQL_USER=root
-            - MYSQL_PASSWORD=root
-            - MYSQL_DATABASE=employee_management
+            - MYSQL_USER=mendix
+            - MYSQL_PASSWORD=mendix
+            - MYSQL_DATABASE=mendix
             - MYSQL_ROOT_PASSWORD=root
         ports:
             - 3307:3307
-
